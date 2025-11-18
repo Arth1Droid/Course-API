@@ -39,6 +39,10 @@ public class Course {
 		this.name = name;
 		this.active = true;
 	}
+
+	public Course() {
+		
+	}
 	
 	public String getProfessor() {
 		return professor;
@@ -56,9 +60,36 @@ public class Course {
 		this.category = category;
 	}
 
-	public Course() {
-		
+	public String getName() {
+		return name;
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+	public LocalDateTime getUpdatedAt() {
+		return updatedAt;
+	}
+	
+
+
 	
 	
 
