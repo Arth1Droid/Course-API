@@ -10,5 +10,11 @@ import br.com.arthdroid1.models.Course;
 @Repository
 public interface CourseRepository extends JpaRepository<Course, Long>{
 	
-	List<Course> findByNameOrCategory(String name, String category);
+	boolean existsByName(String name);
+	
+	List<Course> findByNameContainingIgnoreCase(String name);
+
+    List<Course> findByCategoryContainingIgnoreCase(String category);
+
+    List<Course> findByNameContainingIgnoreCaseAndCategoryContainingIgnoreCase(String name, String category);
 }
